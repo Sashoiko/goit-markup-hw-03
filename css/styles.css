@@ -1,3 +1,20 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+a {
+        margin: 0;
+        padding: 0;
+}
+
+img {
+        display: block;
+}
+
 body {
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
@@ -13,7 +30,14 @@ body {
         --color-hero-and-background: #FFFFFF;
         --color-background-team-btn: #F4F4FD;
         --color-link-and-btn: #4D5AE5;
+        --main-indent: 120px 0;
 
+}
+
+.container {
+        max-width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px;
 }
 
 .list {
@@ -24,7 +48,7 @@ body {
         text-decoration: none;
 }
 
-.open{
+.open {
         color: var(--color-link-and-btn);
 }
 
@@ -68,7 +92,7 @@ body {
         letter-spacing: 0.04em;
         color: var(--color-link-and-btn);
         background: var(--color-background-team-btn);
-        border: 1px solid, var(--color-border-btn-footlogo);
+        border: 1px, solid, var(--color-border-btn-footlogo);
         border-radius: 4px;
         cursor: pointer;
 }
@@ -91,7 +115,21 @@ body {
 
 .header {}
 
-.header-navigation {}
+.header-style {
+        border-bottom: 1px solid #E7E9FC;
+}
+
+.header-blok {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 24px 0;
+}
+
+.header-navigation {
+        display: flex;
+        margin-right: 332px;
+}
 
 .header-logo {
         color: var(--color-body);
@@ -101,7 +139,13 @@ body {
         color: var(--color-link-and-btn);
 }
 
-.header-list {}
+.header-list {
+        max-width: 261px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-left: 76px;
+}
 
 
 .header-item {}
@@ -115,13 +159,16 @@ body {
         color: var(--color-link-and-btn)
 }
 
+
 .header-address {
         font-style: normal;
-
 }
 
-.header-address-list {}
-
+.header-address-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+}
 
 .header-address-item {}
 
@@ -147,32 +194,44 @@ body {
         color: var(--hover-color-mail-tel-btn);
 }
 
-
-
 /* /Шапка */
 
 /* Герой */
 
 .hero {
-
+        min-width: 496px;
         background-color: var(--color-body);
 }
 
+.hero-container {
+        padding: 188px 0;
+}
+
 .hero-title {
+        max-width: 496px;
+        margin: 0 auto;
         font-size: 56px;
         line-height: 1.07;
         text-align: center;
         letter-spacing: 0.02em;
         color: var(--color-hero-and-background);
+        padding-bottom: 48px;
+
 }
 
 .hero-btn {
+        display: block;
+        margin: 0 auto;
         letter-spacing: 0.04em;
         color: var(--color-hero-and-background);
         background: var(--color-link-and-btn);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         cursor: pointer;
+        padding: 16px 32px;
+        min-width: 169px;
+        min-height: 56px;
+
 }
 
 .hero-btn:hover,
@@ -190,12 +249,20 @@ body {
 
 .categoris-title {}
 
-.categoris-list {}
+.categoris-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 120px 0;
+}
 
-.categoris-item {}
+.categoris-item {
+        flex-basis: calc((100% - 72px) / 4);
+}
 
 .categoris-heading {
         color: var(--text-color);
+        margin-bottom: 8px;
 }
 
 
@@ -217,9 +284,18 @@ body {
         text-transform: capitalize;
 }
 
-.product-list {}
+.product-list {
+        padding: 72px 0 120px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+}
 
-.product-item {}
+.product-item {
+        flex-basis: calc((100% - 48px) / 3);
+}
+
+
 
 /* /Продукт */
 
@@ -227,9 +303,11 @@ body {
 
 .team {
         background: var(--color-background-team-btn);
+
 }
 
 .team-title {
+        padding-top: 120px;
         font-size: 36px;
         line-height: 1.11;
         text-align: center;
@@ -237,13 +315,32 @@ body {
         text-transform: capitalize;
 }
 
-.team-list {}
+.team-list {
+        padding-top: 72px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+}
 
 .team-item {
+        min-width: 264px;
+        flex-basis: calc((100% - 72px) / 4);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background: var(--color-hero-and-background);
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         border-radius: 0px 0px 4px 4px;
 }
+
+.team-container {
+        padding: 32px;
+}
+
+
 
 .team-heading {
         font-weight: 500;
@@ -251,6 +348,8 @@ body {
         line-height: 1.2;
         text-align: center;
         letter-spacing: 0.02em;
+        margin-bottom: 8px;
+
 }
 
 .team-text {
@@ -267,12 +366,24 @@ body {
 
 .button-title {}
 
-.button-list {}
+.button-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        padding: 96px 0 72px;
+}
 
-.button-item {}
+.button-item {
+        display: block;
+}
+
 
 .button-item-btn {
         font-family: inherit;
+        padding: 12px 24px;
+        border: 1px solid #E7E9FC;
+        border-radius: 4px;
 }
 
 .button-item-btn:hover,
@@ -287,18 +398,31 @@ body {
 
 /* /Кнопки */
 
-.application {}
 
-.visually-hidden {}
+.application-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px 24px;
+}
 
-.application-list {}
+.application-item {
+        flex-basis: calc((100% - 48px) / 3);
 
-.application-item {}
+}
+
+.application-blok {
+        padding: 32px 16px;
+        background: #FFFFFF;
+        border: 1px solid #E7E9FC;
+        border-top: none;
+}
+
 
 .application-heading {}
 
 .application-text {
         color: var(--text-color);
+
 }
 
 /* Футер */
@@ -306,6 +430,11 @@ body {
 
 .footer {
         background: var(--color-body);
+}
+
+.footer-container {
+        width: 264px;
+        padding: 100px 0;
 }
 
 .footer-logo {
@@ -317,6 +446,7 @@ body {
 }
 
 .footer-text {
+        margin-top: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--color-border-btn-footlogo);
