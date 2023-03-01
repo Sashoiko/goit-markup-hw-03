@@ -40,6 +40,9 @@ body {
         padding: 0 15px;
 }
 
+.section{
+        padding: 120px 0;
+}
 .list {
         list-style: none;
 }
@@ -122,13 +125,13 @@ body {
 .header-blok {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         align-content: center;
         padding: 24px 0;
 }
 
 .header-navigation {
         display: flex;
-        margin-right: 332px;
 }
 
 .header-logo {
@@ -199,13 +202,11 @@ body {
 /* Герой */
 
 .hero {
-        min-width: 496px;
         background-color: var(--color-body);
-}
-
-.hero-container {
         padding: 188px 0;
 }
+
+.hero-container {}
 
 .hero-title {
         max-width: 496px;
@@ -215,7 +216,7 @@ body {
         text-align: center;
         letter-spacing: 0.02em;
         color: var(--color-hero-and-background);
-        padding-bottom: 48px;
+        margin-bottom: 48px;
 
 }
 
@@ -253,7 +254,6 @@ body {
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
-        padding: 120px 0;
 }
 
 .categoris-item {
@@ -274,7 +274,9 @@ body {
 
 /* Продукт */
 
-.product {}
+.product {
+        padding-top: 0;
+}
 
 .product-title {
         font-size: 36px;
@@ -285,7 +287,7 @@ body {
 }
 
 .product-list {
-        padding: 72px 0 120px;
+        margin-top: 72px;
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
@@ -307,7 +309,6 @@ body {
 }
 
 .team-title {
-        padding-top: 120px;
         font-size: 36px;
         line-height: 1.11;
         text-align: center;
@@ -316,28 +317,22 @@ body {
 }
 
 .team-list {
-        padding-top: 72px;
+        margin-top: 72px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 24px;
 }
 
 .team-item {
         min-width: 264px;
         flex-basis: calc((100% - 72px) / 4);
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background: var(--color-hero-and-background);
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         border-radius: 0px 0px 4px 4px;
 }
 
 .team-container {
-        padding: 32px;
+        padding: 32px 16px;
 }
 
 
@@ -371,7 +366,7 @@ body {
         flex-direction: row;
         justify-content: center;
         gap: 24px;
-        padding: 96px 0 72px;
+        margin-bottom: 72px;
 }
 
 .button-item {
@@ -430,11 +425,10 @@ body {
 
 .footer {
         background: var(--color-body);
+        padding: 100px 0;
 }
 
 .footer-container {
-        width: 264px;
-        padding: 100px 0;
 }
 
 .footer-logo {
@@ -447,6 +441,7 @@ body {
 
 .footer-text {
         margin-top: 16px;
+        max-width: 264px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--color-border-btn-footlogo);
